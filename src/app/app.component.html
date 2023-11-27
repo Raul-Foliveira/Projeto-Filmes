@@ -1,0 +1,48 @@
+<h1>Filmes em cartaz</h1>
+
+  <!--Seleçao de CATEGORIA-->
+  <input type="text" [(ngModel)]="categoriaEscolhida" name="categoriaEscolhida" placeholder="Escolha a categoria" style= "width: 200px;">
+  <div *ngIf="categoriaEscolhida"> 
+  <h3>Categorias "{{ categoriaEscolhida }}"</h3>
+  
+    <!--SELECIONADO SUSPENSE-->
+  <div *ngIf="categoriaEscolhida === 'Suspense'">
+    <div *ngFor="let filme of filmesSuspense" class="filmeBlocos">
+      <img [src]="filme.imagem" alt="{{ filme.titulo }}">
+      <div class="titulo">
+        <h4 style="font-size: 15px;">{{ filme.titulo }}</h4>
+        <h2>Descrição</h2>
+        <p style="color: black">{{ filme.descricao }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!--SELECIONADO ANIMAÇÃO-->
+  <div *ngIf="categoriaEscolhida === 'Animação'">
+    <div *ngFor="let filme of filmesAnimacao" class="filmeBlocos">
+      <img [src]="filme.imagem"  alt="{{ filme.titulo }}">
+      <div class="titulo">
+        <h4 strong style =" font-size: 15px;">{{ filme.titulo }}</h4>
+        <h2>Descrição</h2>
+        <p>{{ filme.descricao }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!--SELECIONADO ROMANCE-->
+  <div *ngIf="categoriaEscolhida === 'Romance'">
+    <div *ngFor="let filme of filmesRomance" class="filmeBlocos">
+      <img [src]="filme.imagem" alt="{{ filme.titulo }}">
+      <div class="titulo">
+        <h4 strong style =" font-size: 15px;">{{ filme.titulo }}</h4>
+          <h2>Descrição</h2>
+          <p>{{ filme.descricao }}</p>
+        </div>
+    </div>
+  </div>
+
+  <!--Escolhas compativeis-->
+  <div *ngIf="!['Suspense', 'Animação', 'Romance'].includes(categoriaEscolhida)">
+    <p>Digite o nome da categoria! "{{ categoriaEscolhida }}"</p>
+  </div>
+</div>

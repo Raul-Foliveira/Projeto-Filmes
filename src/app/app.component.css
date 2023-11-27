@@ -1,0 +1,31 @@
+.filmeBlocos {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px; 
+    background-color: rgb(255, 255, 255);
+    border: 6px solid #000;
+    border-radius: 15px;
+    color: black;
+}
+img{
+    max-width: 100%;
+    height: 200px;
+    margin-right: 10px; 
+}
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);    
+}
+h2 h3 {
+    color: rgb(0, 0, 0);
+}
+img{
+    max-width: 100%;
+    height: 200px;
+    margin-right: 10px; 
+}
+.titulo {
+    text-align: left;
+    color: #000000; 
+  }
+
