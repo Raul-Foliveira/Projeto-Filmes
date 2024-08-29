@@ -1,3 +1,3 @@
-# Projeto-Filmes
+# Angular-Filmes
 
-Projeto desenvolvido em Angular.
+Projeto desenvolvido com foco em práticas da linguagem Angular.
